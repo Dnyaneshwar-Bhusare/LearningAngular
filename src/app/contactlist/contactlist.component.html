@@ -1,0 +1,23 @@
+
+    <h2>Contacts</h2>
+    <button>+AddContact</button>
+    <br />
+    <form>
+        <input type="text" hint="Search for Contacts by last name..." [(ngModel)]=sname name="name">
+        <button type="submit" (click)="searchNumber()">Search</button>
+        <br>
+        <button type="submit" (click)="ContactList()">get </button>
+ 
+    <div *ngFor="let i of jsondata">
+       {{i.name}} 
+       {{i.mobileNumber}}
+    </div>
+    <div *ngIf="mnumber">
+        <h2>Name {{sname}}</h2>
+       <h2>Number {{mnumber}} </h2> 
+    </div>
+
+
+    
+   
+</form>   
